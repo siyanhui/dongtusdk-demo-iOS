@@ -101,14 +101,35 @@
         make.height.equalTo(@1);
     }];
     
-    _loadingView = [UIView new];
-    _loadingView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:_loadingView];
-    [_loadingView mas_makeConstraints:^(MASConstraintMaker *make) {
+    //    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToDismissKeyboard)]];
+    
+    UICollectionViewFlowLayout *hotWordFlowLayout = [[UICollectionViewFlowLayout alloc] init];
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat itemWidth = (screenWidth - 20 * 2 - 20 * 2) / 3;
+    hotWordFlowLayout.itemSize = CGSizeMake(itemWidth, itemWidth + 12 + 20 + 12);
+    hotWordFlowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    hotWordFlowLayout.minimumInteritemSpacing = 2;
+    hotWordFlowLayout.minimumLineSpacing = 12;
+    hotWordFlowLayout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
+    
+    _collectionViewContainer = [[UIView alloc] init];
+    _collectionViewContainer.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:_collectionViewContainer];
+    [_collectionViewContainer mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.searchContainer.mas_bottom);
         make.left.equalTo(self.view.mas_left);
         make.right.equalTo(self.view.mas_right);
         make.bottom.equalTo(self.view.mas_bottom);
+    }];
+    
+    _loadingView = [UIView new];
+    _loadingView.backgroundColor = [UIColor whiteColor];
+    [_collectionViewContainer addSubview:_loadingView];
+    [_loadingView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.collectionViewContainer.mas_top).with.offset(1);
+        make.left.equalTo(self.collectionViewContainer.mas_left);
+        make.right.equalTo(self.collectionViewContainer.mas_right);
+        make.bottom.equalTo(self.collectionViewContainer.mas_bottom).with.offset(-1);
     }];
     
     _loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -146,27 +167,6 @@
         make.centerY.equalTo(self.loadingView.mas_centerY).with.offset(-64);
     }];
     _reloadButton.hidden = true;
-    
-    //    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToDismissKeyboard)]];
-    
-    UICollectionViewFlowLayout *hotWordFlowLayout = [[UICollectionViewFlowLayout alloc] init];
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat itemWidth = (screenWidth - 20 * 2 - 20 * 2) / 3;
-    hotWordFlowLayout.itemSize = CGSizeMake(itemWidth, itemWidth + 12 + 20 + 12);
-    hotWordFlowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    hotWordFlowLayout.minimumInteritemSpacing = 2;
-    hotWordFlowLayout.minimumLineSpacing = 12;
-    hotWordFlowLayout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
-    
-    _collectionViewContainer = [[UIView alloc] init];
-    _collectionViewContainer.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:_collectionViewContainer];
-    [_collectionViewContainer mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.searchContainer.mas_bottom);
-        make.left.equalTo(self.view.mas_left);
-        make.right.equalTo(self.view.mas_right);
-        make.bottom.equalTo(self.view.mas_bottom);
-    }];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     itemWidth = (screenWidth - 20 * 2 - 20 * 2) / 3;
@@ -342,7 +342,7 @@
 - (void)showTrending {
     [picturesArray removeAllObjects];
     [_emojiCollectionView setContentOffset:CGPointMake(0, 0)];
-    _collectionViewContainer.hidden = false;
+//    _collectionViewContainer.hidden = false;
     _loadingIndicator.hidden = false;
     [_loadingIndicator startAnimating];
     showingTrending = true;
