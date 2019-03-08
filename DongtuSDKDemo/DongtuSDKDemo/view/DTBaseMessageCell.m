@@ -9,7 +9,6 @@
 #import "DTBaseMessageCell.h"
 #import <DongtuSDK/DongtuSDK.h>
 
-
 @implementation DTBaseMessageCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style
@@ -82,7 +81,7 @@
         case DTMessageTypeText:
             size = [DTBaseMessageCell textContentSize:message.messageContent];
             break;
-        case DTMessageTypeWebSticker:
+        case DTMessageTypeImage:
             size = [DTImageView sizeForImageSize:message.gifData.size imgMaxSize:imageMaxSize];
             break;
     }

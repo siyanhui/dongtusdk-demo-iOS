@@ -31,7 +31,8 @@
 
 - (void)set:(DTMessage *)messageData {
     [super set:messageData];
-//    self.pictureView.image = [UIImage imageNamed:@"mm_emoji_loading"];
+    self.pictureView.image = [UIImage imageNamed:@"emoji_loading"];
+    self.pictureView.errorImage = [UIImage imageNamed:@"emoji_error"];
     [self.pictureView setImageWithDTUrl:messageData.gifData.mainImage gifId:messageData.gifData.imageId];
 }
 

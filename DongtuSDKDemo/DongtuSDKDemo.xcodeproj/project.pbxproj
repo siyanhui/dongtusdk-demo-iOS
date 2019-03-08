@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94803EE0222946A300CFD495 /* QuaterScreenDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94803EDC222946A200CFD495 /* QuaterScreenDemoViewController.m */; };
+		94803EE1222946A300CFD495 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 94803EDE222946A200CFD495 /* UIViewController+HUD.m */; };
+		94803EF0222946C200CFD495 /* DTInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 94803EE4222946C000CFD495 /* DTInputToolBar.m */; };
+		94803EF1222946C200CFD495 /* DTImageMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94803EE7222946C100CFD495 /* DTImageMessageCell.m */; };
+		94803EF2222946C200CFD495 /* DTBaseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94803EEB222946C100CFD495 /* DTBaseMessageCell.m */; };
+		94803EF3222946C200CFD495 /* DTTextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94803EED222946C200CFD495 /* DTTextMessageCell.m */; };
+		94803EF8222946D400CFD495 /* DTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 94803EF4222946D300CFD495 /* DTMessage.m */; };
+		94A7197C2232576400CC183E /* DongTuSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 94A7197A2232576400CC183E /* DongTuSDK.bundle */; };
+		94A7197D2232576400CC183E /* DongtuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A7197B2232576400CC183E /* DongtuSDK.framework */; };
+		94A719802232576D00CC183E /* emoji_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A7197E2232576C00CC183E /* emoji_error.png */; };
+		94A719812232576D00CC183E /* emoji_loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 94A7197F2232576D00CC183E /* emoji_loading.png */; };
 		CC323FF321A8179A00897CC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC323FF221A8179A00897CC0 /* AppDelegate.m */; };
 		CC323FF621A8179A00897CC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC323FF521A8179A00897CC0 /* ViewController.m */; };
 		CC323FF921A8179A00897CC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC323FF721A8179A00897CC0 /* Main.storyboard */; };
 		CC323FFB21A8179C00897CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC323FFA21A8179C00897CC0 /* Assets.xcassets */; };
 		CC323FFE21A8179C00897CC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC323FFC21A8179C00897CC0 /* LaunchScreen.storyboard */; };
 		CC32400121A8179C00897CC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32400021A8179C00897CC0 /* main.m */; };
-		CC32408A21A817C800897CC0 /* QuaterScreenDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32400721A817C700897CC0 /* QuaterScreenDemoViewController.m */; };
-		CC32408B21A817C800897CC0 /* FullScreenDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32400821A817C700897CC0 /* FullScreenDemoViewController.m */; };
-		CC32408C21A817C800897CC0 /* DongtuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC32400B21A817C700897CC0 /* DongtuSDK.framework */; };
-		CC32408D21A817C800897CC0 /* DTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32400E21A817C700897CC0 /* DTMessage.m */; };
-		CC32408E21A817C800897CC0 /* DTHotTag.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32400F21A817C700897CC0 /* DTHotTag.m */; };
-		CC32408F21A817C800897CC0 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32401121A817C700897CC0 /* UIViewController+HUD.m */; };
-		CC32409021A817C800897CC0 /* FullScreenSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32401221A817C700897CC0 /* FullScreenSearchViewController.m */; };
 		CC32409121A817C800897CC0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32401621A817C700897CC0 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		CC32409221A817C800897CC0 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32401F21A817C700897CC0 /* ViewController+MASAdditions.m */; };
 		CC32409321A817C800897CC0 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32402321A817C700897CC0 /* MASCompositeConstraint.m */; };
@@ -62,20 +66,28 @@
 		CC3240B921A817C800897CC0 /* SDWebImageWebPCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32406C21A817C700897CC0 /* SDWebImageWebPCoder.m */; };
 		CC3240BA21A817C800897CC0 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32407021A817C700897CC0 /* UIScrollView+SVInfiniteScrolling.m */; };
 		CC3240BB21A817C800897CC0 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32407121A817C700897CC0 /* UIScrollView+SVPullToRefresh.m */; };
-		CC3240BC21A817C800897CC0 /* HalfScreenDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32407521A817C700897CC0 /* HalfScreenDemoViewController.m */; };
-		CC3240BD21A817C800897CC0 /* DongTuSDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CC32407721A817C800897CC0 /* DongTuSDKResource.bundle */; };
-		CC3240BE21A817C800897CC0 /* DTPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32407A21A817C800897CC0 /* DTPreviewView.m */; };
-		CC3240BF21A817C800897CC0 /* DTHotTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32407C21A817C800897CC0 /* DTHotTagCell.m */; };
-		CC3240C021A817C800897CC0 /* DTBaseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32407E21A817C800897CC0 /* DTBaseMessageCell.m */; };
-		CC3240C121A817C800897CC0 /* DTInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32408021A817C800897CC0 /* DTInputToolBar.m */; };
-		CC3240C221A817C800897CC0 /* DTTextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32408121A817C800897CC0 /* DTTextMessageCell.m */; };
-		CC3240C321A817C800897CC0 /* DTWebStickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32408321A817C800897CC0 /* DTWebStickerCell.m */; };
-		CC3240C421A817C800897CC0 /* DTImageMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32408421A817C800897CC0 /* DTImageMessageCell.m */; };
-		CC3240C521A817C800897CC0 /* DTSearchHistoryTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC32408621A817C800897CC0 /* DTSearchHistoryTagView.m */; };
 		CC3240C821A8189C00897CC0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3240C721A8189C00897CC0 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94803EDC222946A200CFD495 /* QuaterScreenDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuaterScreenDemoViewController.m; sourceTree = "<group>"; };
+		94803EDD222946A200CFD495 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		94803EDE222946A200CFD495 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		94803EDF222946A300CFD495 /* QuaterScreenDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuaterScreenDemoViewController.h; sourceTree = "<group>"; };
+		94803EE4222946C000CFD495 /* DTInputToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInputToolBar.m; sourceTree = "<group>"; };
+		94803EE5222946C000CFD495 /* DTBaseMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBaseMessageCell.h; sourceTree = "<group>"; };
+		94803EE6222946C000CFD495 /* DTImageMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTImageMessageCell.h; sourceTree = "<group>"; };
+		94803EE7222946C100CFD495 /* DTImageMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTImageMessageCell.m; sourceTree = "<group>"; };
+		94803EE8222946C100CFD495 /* DTTextMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTextMessageCell.h; sourceTree = "<group>"; };
+		94803EEA222946C100CFD495 /* DTInputToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInputToolBar.h; sourceTree = "<group>"; };
+		94803EEB222946C100CFD495 /* DTBaseMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBaseMessageCell.m; sourceTree = "<group>"; };
+		94803EED222946C200CFD495 /* DTTextMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTextMessageCell.m; sourceTree = "<group>"; };
+		94803EF4222946D300CFD495 /* DTMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMessage.m; sourceTree = "<group>"; };
+		94803EF6222946D400CFD495 /* DTMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMessage.h; sourceTree = "<group>"; };
+		94A7197A2232576400CC183E /* DongTuSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DongTuSDK.bundle; sourceTree = "<group>"; };
+		94A7197B2232576400CC183E /* DongtuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DongtuSDK.framework; sourceTree = "<group>"; };
+		94A7197E2232576C00CC183E /* emoji_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_error.png; sourceTree = "<group>"; };
+		94A7197F2232576D00CC183E /* emoji_loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji_loading.png; sourceTree = "<group>"; };
 		CC323FEE21A8179A00897CC0 /* DongtuSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DongtuSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC323FF121A8179A00897CC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC323FF221A8179A00897CC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,17 +98,6 @@
 		CC323FFD21A8179C00897CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC323FFF21A8179C00897CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC32400021A8179C00897CC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CC32400721A817C700897CC0 /* QuaterScreenDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuaterScreenDemoViewController.m; sourceTree = "<group>"; };
-		CC32400821A817C700897CC0 /* FullScreenDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenDemoViewController.m; sourceTree = "<group>"; };
-		CC32400921A817C700897CC0 /* FullScreenDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenDemoViewController.h; sourceTree = "<group>"; };
-		CC32400A21A817C700897CC0 /* HalfScreenDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HalfScreenDemoViewController.h; sourceTree = "<group>"; };
-		CC32400B21A817C700897CC0 /* DongtuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DongtuSDK.framework; sourceTree = "<group>"; };
-		CC32400D21A817C700897CC0 /* DTHotTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHotTag.h; sourceTree = "<group>"; };
-		CC32400E21A817C700897CC0 /* DTMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMessage.m; sourceTree = "<group>"; };
-		CC32400F21A817C700897CC0 /* DTHotTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHotTag.m; sourceTree = "<group>"; };
-		CC32401021A817C700897CC0 /* DTMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMessage.h; sourceTree = "<group>"; };
-		CC32401121A817C700897CC0 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
-		CC32401221A817C700897CC0 /* FullScreenSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenSearchViewController.m; sourceTree = "<group>"; };
 		CC32401521A817C700897CC0 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		CC32401621A817C700897CC0 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		CC32401721A817C700897CC0 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -189,27 +190,6 @@
 		CC32407121A817C700897CC0 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
 		CC32407221A817C700897CC0 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
 		CC32407321A817C700897CC0 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
-		CC32407421A817C700897CC0 /* QuaterScreenDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuaterScreenDemoViewController.h; sourceTree = "<group>"; };
-		CC32407521A817C700897CC0 /* HalfScreenDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HalfScreenDemoViewController.m; sourceTree = "<group>"; };
-		CC32407621A817C800897CC0 /* FullScreenSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenSearchViewController.h; sourceTree = "<group>"; };
-		CC32407721A817C800897CC0 /* DongTuSDKResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DongTuSDKResource.bundle; sourceTree = "<group>"; };
-		CC32407921A817C800897CC0 /* DTWebStickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTWebStickerCell.h; sourceTree = "<group>"; };
-		CC32407A21A817C800897CC0 /* DTPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPreviewView.m; sourceTree = "<group>"; };
-		CC32407B21A817C800897CC0 /* DTTextMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTextMessageCell.h; sourceTree = "<group>"; };
-		CC32407C21A817C800897CC0 /* DTHotTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHotTagCell.m; sourceTree = "<group>"; };
-		CC32407D21A817C800897CC0 /* DTImageMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTImageMessageCell.h; sourceTree = "<group>"; };
-		CC32407E21A817C800897CC0 /* DTBaseMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBaseMessageCell.m; sourceTree = "<group>"; };
-		CC32407F21A817C800897CC0 /* DTSearchHistoryTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSearchHistoryTagView.h; sourceTree = "<group>"; };
-		CC32408021A817C800897CC0 /* DTInputToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInputToolBar.m; sourceTree = "<group>"; };
-		CC32408121A817C800897CC0 /* DTTextMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTextMessageCell.m; sourceTree = "<group>"; };
-		CC32408221A817C800897CC0 /* DTPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPreviewView.h; sourceTree = "<group>"; };
-		CC32408321A817C800897CC0 /* DTWebStickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTWebStickerCell.m; sourceTree = "<group>"; };
-		CC32408421A817C800897CC0 /* DTImageMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTImageMessageCell.m; sourceTree = "<group>"; };
-		CC32408521A817C800897CC0 /* DTHotTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHotTagCell.h; sourceTree = "<group>"; };
-		CC32408621A817C800897CC0 /* DTSearchHistoryTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSearchHistoryTagView.m; sourceTree = "<group>"; };
-		CC32408721A817C800897CC0 /* DTBaseMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBaseMessageCell.h; sourceTree = "<group>"; };
-		CC32408821A817C800897CC0 /* DTInputToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInputToolBar.h; sourceTree = "<group>"; };
-		CC32408921A817C800897CC0 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
 		CC3240C721A8189C00897CC0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -218,14 +198,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A7197D2232576400CC183E /* DongtuSDK.framework in Frameworks */,
 				CC3240C821A8189C00897CC0 /* libsqlite3.0.tbd in Frameworks */,
-				CC32408C21A817C800897CC0 /* DongtuSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94A719792232576300CC183E /* DongtuSDK */ = {
+			isa = PBXGroup;
+			children = (
+				94A7197A2232576400CC183E /* DongTuSDK.bundle */,
+				94A7197B2232576400CC183E /* DongtuSDK.framework */,
+			);
+			path = DongtuSDK;
+			sourceTree = "<group>";
+		};
 		CC323FE521A8179A00897CC0 = {
 			isa = PBXGroup;
 			children = (
@@ -246,25 +235,20 @@
 		CC323FF021A8179A00897CC0 /* DongtuSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CC32400B21A817C700897CC0 /* DongtuSDK.framework */,
-				CC32407721A817C800897CC0 /* DongTuSDKResource.bundle */,
-				CC32400921A817C700897CC0 /* FullScreenDemoViewController.h */,
-				CC32400821A817C700897CC0 /* FullScreenDemoViewController.m */,
-				CC32407621A817C800897CC0 /* FullScreenSearchViewController.h */,
-				CC32401221A817C700897CC0 /* FullScreenSearchViewController.m */,
-				CC32400A21A817C700897CC0 /* HalfScreenDemoViewController.h */,
-				CC32407521A817C700897CC0 /* HalfScreenDemoViewController.m */,
+				94A7197E2232576C00CC183E /* emoji_error.png */,
+				94A7197F2232576D00CC183E /* emoji_loading.png */,
+				94A719792232576300CC183E /* DongtuSDK */,
 				CC32400C21A817C700897CC0 /* Model */,
-				CC32407421A817C700897CC0 /* QuaterScreenDemoViewController.h */,
-				CC32400721A817C700897CC0 /* QuaterScreenDemoViewController.m */,
-				CC32408921A817C800897CC0 /* UIViewController+HUD.h */,
-				CC32401121A817C700897CC0 /* UIViewController+HUD.m */,
 				CC32401321A817C700897CC0 /* Vendor */,
 				CC32407821A817C800897CC0 /* view */,
 				CC323FF121A8179A00897CC0 /* AppDelegate.h */,
 				CC323FF221A8179A00897CC0 /* AppDelegate.m */,
 				CC323FF421A8179A00897CC0 /* ViewController.h */,
 				CC323FF521A8179A00897CC0 /* ViewController.m */,
+				94803EDF222946A300CFD495 /* QuaterScreenDemoViewController.h */,
+				94803EDC222946A200CFD495 /* QuaterScreenDemoViewController.m */,
+				94803EDD222946A200CFD495 /* UIViewController+HUD.h */,
+				94803EDE222946A200CFD495 /* UIViewController+HUD.m */,
 				CC323FF721A8179A00897CC0 /* Main.storyboard */,
 				CC323FFA21A8179C00897CC0 /* Assets.xcassets */,
 				CC323FFC21A8179C00897CC0 /* LaunchScreen.storyboard */,
@@ -277,10 +261,8 @@
 		CC32400C21A817C700897CC0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CC32400D21A817C700897CC0 /* DTHotTag.h */,
-				CC32400E21A817C700897CC0 /* DTMessage.m */,
-				CC32400F21A817C700897CC0 /* DTHotTag.m */,
-				CC32401021A817C700897CC0 /* DTMessage.h */,
+				94803EF4222946D300CFD495 /* DTMessage.m */,
+				94803EF6222946D400CFD495 /* DTMessage.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,22 +401,14 @@
 		CC32407821A817C800897CC0 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				CC32407921A817C800897CC0 /* DTWebStickerCell.h */,
-				CC32407A21A817C800897CC0 /* DTPreviewView.m */,
-				CC32407B21A817C800897CC0 /* DTTextMessageCell.h */,
-				CC32407C21A817C800897CC0 /* DTHotTagCell.m */,
-				CC32407D21A817C800897CC0 /* DTImageMessageCell.h */,
-				CC32407E21A817C800897CC0 /* DTBaseMessageCell.m */,
-				CC32407F21A817C800897CC0 /* DTSearchHistoryTagView.h */,
-				CC32408021A817C800897CC0 /* DTInputToolBar.m */,
-				CC32408121A817C800897CC0 /* DTTextMessageCell.m */,
-				CC32408221A817C800897CC0 /* DTPreviewView.h */,
-				CC32408321A817C800897CC0 /* DTWebStickerCell.m */,
-				CC32408421A817C800897CC0 /* DTImageMessageCell.m */,
-				CC32408521A817C800897CC0 /* DTHotTagCell.h */,
-				CC32408621A817C800897CC0 /* DTSearchHistoryTagView.m */,
-				CC32408721A817C800897CC0 /* DTBaseMessageCell.h */,
-				CC32408821A817C800897CC0 /* DTInputToolBar.h */,
+				94803EE5222946C000CFD495 /* DTBaseMessageCell.h */,
+				94803EEB222946C100CFD495 /* DTBaseMessageCell.m */,
+				94803EE6222946C000CFD495 /* DTImageMessageCell.h */,
+				94803EE7222946C100CFD495 /* DTImageMessageCell.m */,
+				94803EEA222946C100CFD495 /* DTInputToolBar.h */,
+				94803EE4222946C000CFD495 /* DTInputToolBar.m */,
+				94803EE8222946C100CFD495 /* DTTextMessageCell.h */,
+				94803EED222946C200CFD495 /* DTTextMessageCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -505,9 +479,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC323FFE21A8179C00897CC0 /* LaunchScreen.storyboard in Resources */,
-				CC3240BD21A817C800897CC0 /* DongTuSDKResource.bundle in Resources */,
+				94A719812232576D00CC183E /* emoji_loading.png in Resources */,
 				CC323FFB21A8179C00897CC0 /* Assets.xcassets in Resources */,
 				CC323FF921A8179A00897CC0 /* Main.storyboard in Resources */,
+				94A719802232576D00CC183E /* emoji_error.png in Resources */,
+				94A7197C2232576400CC183E /* DongTuSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,17 +498,14 @@
 				CC3240B321A817C800897CC0 /* SDWebImageGIFCoder.m in Sources */,
 				CC323FF621A8179A00897CC0 /* ViewController.m in Sources */,
 				CC32409E21A817C800897CC0 /* MKAnnotationView+WebCache.m in Sources */,
-				CC32408D21A817C800897CC0 /* DTMessage.m in Sources */,
 				CC32409621A817C800897CC0 /* NSArray+MASAdditions.m in Sources */,
-				CC32408F21A817C800897CC0 /* UIViewController+HUD.m in Sources */,
 				CC3240B521A817C800897CC0 /* UIView+WebCacheOperation.m in Sources */,
+				94803EF3222946C200CFD495 /* DTTextMessageCell.m in Sources */,
 				CC32409D21A817C800897CC0 /* UIImage+WebP.m in Sources */,
 				CC32409721A817C800897CC0 /* View+MASAdditions.m in Sources */,
-				CC3240BF21A817C800897CC0 /* DTHotTagCell.m in Sources */,
 				CC3240B621A817C800897CC0 /* UIView+WebCache.m in Sources */,
 				CC3240B221A817C800897CC0 /* NSImage+WebCache.m in Sources */,
 				CC32409121A817C800897CC0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				CC3240C321A817C800897CC0 /* DTWebStickerCell.m in Sources */,
 				CC3240B421A817C800897CC0 /* SDImageCacheConfig.m in Sources */,
 				CC3240BB21A817C800897CC0 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				CC3240A821A817C800897CC0 /* SDWebImageCompat.m in Sources */,
@@ -541,41 +514,36 @@
 				CC3240B721A817C800897CC0 /* SDWebImageImageIOCoder.m in Sources */,
 				CC32409C21A817C800897CC0 /* MBProgressHUD.m in Sources */,
 				CC3240A721A817C800897CC0 /* SDWebImageCoderHelper.m in Sources */,
-				CC32409021A817C800897CC0 /* FullScreenSearchViewController.m in Sources */,
 				CC3240A421A817C800897CC0 /* SDWebImageDownloader.m in Sources */,
-				CC3240C021A817C800897CC0 /* DTBaseMessageCell.m in Sources */,
 				CC3240A521A817C800897CC0 /* UIImage+GIF.m in Sources */,
-				CC3240BC21A817C800897CC0 /* HalfScreenDemoViewController.m in Sources */,
 				CC32409221A817C800897CC0 /* ViewController+MASAdditions.m in Sources */,
 				CC3240A121A817C800897CC0 /* SDWebImageFrame.m in Sources */,
 				CC3240AD21A817C800897CC0 /* SDImageCache.m in Sources */,
-				CC3240C121A817C800897CC0 /* DTInputToolBar.m in Sources */,
 				CC32409A21A817C800897CC0 /* MASViewAttribute.m in Sources */,
 				CC3240AA21A817C800897CC0 /* SDWebImageCoder.m in Sources */,
 				CC32409921A817C800897CC0 /* MASViewConstraint.m in Sources */,
+				94803EE1222946A300CFD495 /* UIViewController+HUD.m in Sources */,
 				CC3240AE21A817C800897CC0 /* SDWebImageDownloaderOperation.m in Sources */,
 				CC32400121A8179C00897CC0 /* main.m in Sources */,
 				CC32409421A817C800897CC0 /* MASConstraintMaker.m in Sources */,
 				CC3240AF21A817C800897CC0 /* SDWebImageTransition.m in Sources */,
-				CC3240C421A817C800897CC0 /* DTImageMessageCell.m in Sources */,
-				CC32408A21A817C800897CC0 /* QuaterScreenDemoViewController.m in Sources */,
-				CC3240C221A817C800897CC0 /* DTTextMessageCell.m in Sources */,
-				CC3240C521A817C800897CC0 /* DTSearchHistoryTagView.m in Sources */,
 				CC3240A021A817C800897CC0 /* UIImageView+HighlightedWebCache.m in Sources */,
 				CC3240B121A817C800897CC0 /* UIImageView+WebCache.m in Sources */,
 				CC3240B921A817C800897CC0 /* SDWebImageWebPCoder.m in Sources */,
-				CC3240BE21A817C800897CC0 /* DTPreviewView.m in Sources */,
 				CC3240AB21A817C800897CC0 /* NSButton+WebCache.m in Sources */,
 				CC3240B821A817C800897CC0 /* UIButton+WebCache.m in Sources */,
+				94803EF2222946C200CFD495 /* DTBaseMessageCell.m in Sources */,
+				94803EE0222946A300CFD495 /* QuaterScreenDemoViewController.m in Sources */,
 				CC3240A621A817C800897CC0 /* UIImage+MultiFormat.m in Sources */,
 				CC32409521A817C800897CC0 /* MASLayoutConstraint.m in Sources */,
-				CC32408B21A817C800897CC0 /* FullScreenDemoViewController.m in Sources */,
-				CC32408E21A817C800897CC0 /* DTHotTag.m in Sources */,
 				CC32409821A817C800897CC0 /* MASConstraint.m in Sources */,
 				CC3240BA21A817C800897CC0 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				CC3240AC21A817C800897CC0 /* SDAnimatedImageRep.m in Sources */,
 				CC3240A321A817C800897CC0 /* SDWebImageCodersManager.m in Sources */,
 				CC3240A921A817C800897CC0 /* SDWebImagePrefetcher.m in Sources */,
+				94803EF1222946C200CFD495 /* DTImageMessageCell.m in Sources */,
+				94803EF8222946D400CFD495 /* DTMessage.m in Sources */,
+				94803EF0222946C200CFD495 /* DTInputToolBar.m in Sources */,
 				CC323FF321A8179A00897CC0 /* AppDelegate.m in Sources */,
 				CC3240A221A817C800897CC0 /* UIImage+ForceDecode.m in Sources */,
 			);
@@ -724,6 +692,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DongtuSDKDemo",
+					"$(PROJECT_DIR)/DongtuSDKDemo/DongtuSDK",
 				);
 				INFOPLIST_FILE = DongtuSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -747,6 +716,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DongtuSDKDemo",
+					"$(PROJECT_DIR)/DongtuSDKDemo/DongtuSDK",
 				);
 				INFOPLIST_FILE = DongtuSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

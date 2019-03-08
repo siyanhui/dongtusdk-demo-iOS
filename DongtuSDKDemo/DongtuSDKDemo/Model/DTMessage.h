@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, DTMessageType) {
     /*!
      big emoji message
      */
-    DTMessageTypeWebSticker = 2,
+    DTMessageTypeImage = 2,
     
 };
 
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSUInteger, DTMessageType) {
 - (id)initWithMessageType:(DTMessageType)messageType messageContent:(NSString *)messageContent gifData: (DTGif *)gifData;
 
 
-- (id)initWithMessageType:(DTMessageType)messageType messageContent:(NSString *)messageContent;
+- (id)initWithMessageType:(DTMessageType)messageType messageContent:(NSString *)messageContent pictureString:(NSString *)pictureString pictureSize:(CGSize)pictureSize;
 
 
 @end

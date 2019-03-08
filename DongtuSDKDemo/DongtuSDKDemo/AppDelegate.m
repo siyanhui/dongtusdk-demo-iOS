@@ -9,17 +9,17 @@
 #import "AppDelegate.h"
 #import <DongtuSDK/DongtuSDK.h>
 #import "ViewController.h"
-
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [DongTu initWithAppId:@"appid" secret:@"appsecret"];
+    
+    
+    [[DongTu sharedInstance] initWithAppId:@"" secret:@""];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     
     _window.rootViewController = nav;
@@ -32,7 +32,6 @@
     nav.navigationBar.titleTextAttributes = attributes;
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

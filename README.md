@@ -10,7 +10,7 @@
 
 ### 手动导入SDK
 
-下载当前最新版本，解压缩后获得： `DongtuSDK`， 其中包含SDK所需的资源文件`DongtuSDKResource.bundle`和库文件`DongtuSDK.framework`
+下载当前最新版本，解压缩后获得： `DongtuSDK`， 其中包含SDK和库文件`DongtuSDK.framework`及所需的资源文件`DongTuSDK.bundle`
 
 
 ### 添加系统库依赖
@@ -28,6 +28,7 @@
 
 如您暂未获得以上接入信息，可以在此[申请](http://open.biaoqingmm.com/open/register/index.html)
 
+
 ## 第三步：开始集成
 
 ### 0. 注册AppId&AppSecret
@@ -39,7 +40,7 @@
 [DongTu initWithAppId:@"your app id" secret:@"your secret"];
 ```
 
-### 1. 通过 `DongTu` 提供的接口查看 SDK 版本、设置用户、获取流行表情、搜索表情
+### 1. 通过 `DongTu` 提供的接口查看 SDK 版本、设置用户、传输用户的位置信息
 
 - 查看 SDK 版本
 
@@ -65,177 +66,118 @@
 +(void)setUser:(DTUser *)user;
 ```
 
-- 流行动图
+### 3. 使用联想功能和GIF搜索模块
 
+#### 设置SDK代理 
+使用联想功能和GIF搜索模块前需要设置代理，以接收SDK的事件
 ```objectivec
-/**
-获取流行表情数据静态方法
-
-@param page 页数
-@param pageSize 一页数据的数量
-@param completionHandler 回调处理
-*/
-+ (void)trendingGifsAt:(int)page
-          withPageSize:(int)pageSize
-     completionHandler:(void (^ __nonnull)(NSArray< DTGif *> * __nullable gifs, DTError * __nullable error))completionHandler;
-
+[DongTu sharedInstance].delegate = self;
 ```
 
-- 搜索动图
-
-```objectivec
+#### 配置联想功能
+```objectivec 
 /**
-获取搜索表情数据
-
-@param key 搜索关键词
-@param bypass 是否越过白名单 YES:搜索所有词；NO:只搜索白名单内的词
-@param page 页数
-@param pageSize 一页数据的数量
-@param completionHandler 回调处理
-*/
-+ (void)searchGifsWithKey:(NSString * _Nullable)key
-       bypassKeyWhiteList:(BOOL)bypass
-                       At:(int)page
-             withPageSize:(int)pageSize
-        completionHandler:(void (^ __nonnull)(NSString * __nonnull searchKey, NSArray< DTGif *> *__nullable gifs, DTError * __nullable error))completionHandler;
-
-/**
-获取搜索表情数据 (默认只搜索白名单内的词)
-
-@param key 搜索关键词
-@param page 页数
-@param pageSize 一页数据的数量
-@param completionHandler 回调处理
-*/
-+ (void)searchGifsWithKey:(NSString * _Nullable)key
-                       At:(int)page
-             withPageSize:(int)pageSize
-        completionHandler:(void (^ __nonnull)(NSString * __nonnull searchKey, NSArray< DTGif *> *__nullable gifs, DTError * __nullable error))completionHandler;
-        
+ *  @param attachedView  联想UI放置在配置的attachedView上面
+ *  @param input         联想根据配置的input输入框中的内容获取表情
+ */
+- (void)shouldShowSearchPopupAboveView:(nonnull UIView *)attachedView
+                             withInput:(nonnull UIResponder <UITextInput> *)input;
 ```
 
-### 2. 通过`DTThumbImageView`展示 `DongTu`接口返回的动图
-
-```objectivec
-/**
-设置图片数据函数
-
-@param urlString 图片url
-*/
-- (void)setImageWithDTUrl:(NSString * _Nonnull)urlString;
-
-/**
-设置图片数据函数
-
-@param urlString 图片url
-@param handler 函数回调
-*/
-- (void)setImageWithDTUrl:(NSString * _Nonnull)urlString completHandler:(void (^_Nullable)(BOOL success))handler;
+#### 触发GIF搜索
+```objectivec 
+- (void)triggerSearchGifWindow;
 ```
 
-例：键盘或弹窗展示图片列表
+#### 实现SDK代理方法
+```objectivec 
+//点击了联想UI和GIF UI中的表情图片代理
+- (void)didSelectGif:(DTGif *)gif {
+    
+}
+```
 
-<img src="http://static.dongtu.com/apiplus_ios_preview1.png" height = "400" alt="图片名称" align=center />
 
+### 4. 表情显示：通过`DTImageView`展示 `DTGif`
 
-### 3. 通过`DTImageView`展示 `DTGif` 
-
-说明：
-- 有版权的图片，控件底部会展示版权信息
-- 控件会拦截点击事件，进入图片详情页或者图片版权详情页
-
+#### 展示 `DTGif`
 ```objectivec
 /**
-设置图片数据函数
+ 设置Gif图片数据函数
 
-@param urlString 图片url
-@param gifId 图片id
-*/
+ @param urlString 图片url
+ @param gifId 图片id
+ */
 - (void)setImageWithDTUrl:(NSString * _Nonnull)urlString gifId:(NSString * _Nonnull)gifId;
 
 /**
-设置图片数据函数
+ 设置Gif图片数据函数
 
-@param urlString 图片url
-@param gifId 图片id
-@param handler 函数回调
-*/
+ @param urlString 图片url
+ @param gifId 图片id
+ @param handler 处理成功回调
+ */
 - (void)setImageWithDTUrl:(NSString * _Nonnull)urlString gifId:(NSString * _Nonnull)gifId completHandler:(void (^_Nullable)(BOOL success))handler;
 ```
 
-例：展示图片消息
+### 5. IM 消息发送、接收并解析展示示例 （以环信为例）
 
-<img src="http://static.dongtu.com/apiplus_ios_preview2.png" height = "400" alt="图片名称" align=center />
+发送`DTGIf`消息
 
-
-### IM 消息发送、接收并解析展示示例 （以环信为例）
-
-- 发送消息
 ```objectivec
 
-//1.准备发送的图片
-DTGif *gif = imagesArray[index];   
+-(void)sendGifMessage:(DTGif *)gif {
+    //1.DTGif的text字段作为发送的文字内容
+    NSString *sendStr = [@"[" stringByAppendingFormat:@"%@]", gif.text];
 
-//2.构造消息的扩展信息
-NSDictionary *msgData = @{WEBSTICKER_URL: gif.mainImage,                     //图片url
-                          WEBSTICKER_IS_GIF: (gif.isAnimated ? @"1" : @"0"), //图片是否是动图
-                          WEBSTICKER_ID: gif.imageId,                        //图片id
-                          WEBSTICKER_WIDTH: @((float)gif.size.width),        //图片宽度
-                          WEBSTICKER_HEIGHT: @((float)gif.size.height)};     //图片高度
-                          
-NSDictionary *extDic = @{TEXT_MESG_TYPE:TEXT_MESG_WEB_TYPE,                  //消息类型
-                         TEXT_MESG_DATA:msgData
-                        };
+    //2.构造消息的扩展信息
+    NSDictionary *msgData = @{@"sticker_url": gif.mainImage,                //图片url
+                              @"is_gif": (gif.isAnimated ? @"1" : @"0"),    //图片是否是动图
+                              @"data_id": gif.imageId,                      //图片id
+                              @"w": @((float)gif.size.width),               //图片宽度
+                              @"h": @((float)gif.size.height)};             //图片高度
 
-//3.DTGif的text字段作为发送的文字内容
-NSString *sendStr = [@"[" stringByAppendingFormat:@"%@]", gif.text];  
+    NSDictionary *extDic = @{@"txt_msgType":TEXT_MESG_WEB_TYPE,             //配置自定义消息类型
+                             @"msg_data":msgData};                          //消息扩展
 
-//4.构造消息
-EMMessage *message = [EaseSDKHelper sendTextMessage:sendStr
-                                                 to:self.conversation.conversationId
-                                        messageType:[self _messageTypeFromConversationType]
-                                         messageExt:extDic];
-
-//5.发送消息
-[[EMClient sharedClient].chatManager sendMessage:message progress:nil completion:^(EMMessage *aMessage, EMError *aError) {
-    if (!aError) {
-        [weakself _refreshAfterSentMessage:aMessage];
-    } else {
-        [weakself.tableView reloadData];
-    }
-}];
+    //3.构造消息
+    EMMessage *message = [EaseSDKHelper sendTextMessage:sendStr
+                        to:self.conversation.conversationId
+                        messageType:[self _messageTypeFromConversationType]
+                        messageExt:extDic];
+    
+    //4.发送消息
+    [self _sendMessage:message];
+}
 
 ```
 
-- 接收并解析展示消息
+解析`DTGif`消息 & 展示 `DTGif`消息
+  
 ```objectivec
-
-//1.接收并解析消息
-NSDictionary *ext = message.ext;
-self.mmExt = ext;
-CGSize size = CGSizeZero;
-if([ext[TEXT_MESG_TYPE] isEqualToString: TEXT_MESG_WEB_TYPE]) {  //判断消息类型
-    NSDictionary *msgData = ext[TEXT_MESG_DATA];
-    float height = [msgData[WEBSTICKER_HEIGHT] floatValue];
-    float width = [msgData[WEBSTICKER_WIDTH] floatValue];
-    size = CGSizeMake(width, height);      
+//1.解析消息扩展，提取图片url和id
+NSDictionary *extDic = messageModel.ext;
+if (extDic != nil && [extDic[@"txt_msgType"] isEqualToString:@"webtype"]) {
+    NSDictionary *msgData = extDic[@"msg_data"];
+    if (msgData) {
+        NSString *gifUrl = msgData[@"sticker_url"];
+        NSString *gifId = msgData[@"data_id"];
+        float height = [msgData[@"h"] floatValue];
+        float width = [msgData[@"w"] floatValue];
+    }
 }
-self.gifSize = size;   //图片尺寸
 
+//2.展示
 
-//2.计算图片展示size
-CGSize imageSize = [DTImageView sizeForImageSize:CGSizeMake(model.gifSize.width, model.gifSize.height)               
+//计算图片展示size
+CGSize imageSize = [DTImageView sizeForImageSize:CGSizeMake(width, height)               
                                       imgMaxSize:CGSizeMake(200, 150)];
 
 
 //3.展示消息
-if ([model.mmExt[TEXT_MESG_TYPE] isEqualToString:TEXT_MESG_WEB_TYPE]) {             //判断消息类型
-    NSDictionary *msgData = model.mmExt[TEXT_MESG_DATA];                            //解析消息扩展
-    NSString *webStickerUrl = msgData[WEBSTICKER_URL];
-    NSString *webStickerId = msgData[WEBSTICKER_ID];
-    self.bubbleView.imageView.image = [UIImage imageNamed:@"mm_emoji_loading"];
-    self.bubbleView.imageView.errorImage = [UIImage imageNamed:@"mm_emoji_error"];
-    [self.bubbleView.imageView setImageWithDTUrl:webStickerUrl gifId:webStickerId]; //展示消息
-}
-
+imageView = [[DTImageView alloc] init];
+[imageView setImageWithDTUrl:gifUrl gifId:gifId];
 ```
+
+### 6. UI定制
+SDK通过DTTheme提供一定程度的UI定制。具体参考类说明DTTheme。

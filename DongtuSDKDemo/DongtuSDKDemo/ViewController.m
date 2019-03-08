@@ -9,8 +9,6 @@
 #import "ViewController.h"
 #import "Masonry.h"
 #import "QuaterScreenDemoViewController.h"
-#import "HalfScreenDemoViewController.h"
-#import "FullScreenDemoViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -50,7 +48,7 @@
     _infoLabel = [UILabel new];
     _infoLabel.backgroundColor = [UIColor clearColor];
     _infoLabel.textColor = [UIColor colorWithWhite:74.0 / 255 alpha:1.0];
-    _infoLabel.text = @"动图宇宙API";
+    _infoLabel.text = @"动图SDK Demo";
     _infoLabel.font = [UIFont systemFontOfSize:24];
     _infoLabel.textAlignment = NSTextAlignmentRight;
     [_headerContainerView addSubview:_infoLabel];
@@ -95,7 +93,7 @@
 
 #pragma mark: UITableViewDelegate, UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -103,16 +101,10 @@
     cell.textLabel.font = [UIFont systemFontOfSize:18];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:18];
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"联想搜索";
-        cell.detailTextLabel.text = @"Quater Screen";
+        cell.textLabel.text = @"动图SDK Demo";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }else if (indexPath.row == 1) {
-        cell.textLabel.text = @"键盘搜索";
-        cell.detailTextLabel.text = @"Half Screen";
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }else if (indexPath.row == 2) {
-        cell.textLabel.text = @"全屏搜索";
-        cell.detailTextLabel.text = @"Full Screen";
+        cell.textLabel.text = @"动图Store SDK Demo";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return cell;
@@ -124,16 +116,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
-    if (indexPath.row == 0) {
-        QuaterScreenDemoViewController *vc = [[QuaterScreenDemoViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:true];
-    }else if (indexPath.row == 1) {
-        HalfScreenDemoViewController *vc = [[HalfScreenDemoViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:true];
-    }else if (indexPath.row == 2) {
-        FullScreenDemoViewController *vc = [[FullScreenDemoViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:true];
-    }
+    //    if (indexPath.row == 0) {
+    //        QuaterScreenDemoViewController *vc = [[QuaterScreenDemoViewController alloc] init];
+    //        [self.navigationController pushViewController:vc animated:true];
+    //    }else if (indexPath.row == 1) {
+    //        HalfScreenDemoViewController *vc = [[HalfScreenDemoViewController alloc] init];
+    //        [self.navigationController pushViewController:vc animated:true];
+    //    }else if (indexPath.row == 2) {
+    //
+    //    }
+    
+    QuaterScreenDemoViewController *vc = [[QuaterScreenDemoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 

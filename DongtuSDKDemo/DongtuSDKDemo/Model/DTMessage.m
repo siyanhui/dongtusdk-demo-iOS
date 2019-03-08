@@ -20,12 +20,14 @@
     return self;
 }
 
-- (id)initWithMessageType:(DTMessageType)messageType messageContent:(NSString *)messageContent {
+- (id)initWithMessageType:(DTMessageType)messageType messageContent:(NSString *)messageContent pictureString:(NSString *)pictureString pictureSize:(CGSize)pictureSize {
     
     self = [super init];
     if (self) {
         self.messageType = messageType;
         self.messageContent = messageContent;
+        self.pictureString = pictureString;
+        self.pictureSize = pictureSize;
     }
     
     return self;

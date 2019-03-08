@@ -8,7 +8,6 @@
 
 #import "DTInputToolBar.h"
 #import "Masonry.h"
-#import <DongtuSDK/DongtuSDK.h>
 
 @interface DTInputToolBar () {
     NSTimer *searchTimer;
@@ -40,7 +39,7 @@
                                              selector:@selector(didReceiveKeyboardWillShowNotification:)
                                                  name:UIKeyboardWillShowNotification
                                                object:nil];
-    
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveKeyboardWillHideNotification:)
                                                  name:UIKeyboardWillHideNotification
@@ -77,7 +76,7 @@
 - (void)didReceiveKeyboardWillHideNotification:(NSNotification *)notification
 {
     NSDictionary *userInfo = [notification userInfo];
-    //    CGRect keyboardEndFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];    NSRect: {{0, 736}, {414, 271}}
+//    CGRect keyboardEndFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];    NSRect: {{0, 736}, {414, 271}}
     
     UIViewAnimationCurve animationCurve = [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
     NSInteger animationCurveOption = (animationCurve << 16);
@@ -262,20 +261,12 @@
 
 #pragma mark user action
 - (void)didTouchEmojiDown:(UIButton *)sender {
-    
-    switch (self.inputType) {
-        case InputTypeFull:
-            if ([self.delegate respondsToSelector:@selector(toggleSearchMode)]) {
-                [self.delegate toggleSearchMode];
-                return;
-            }
-            break;
-        default:
-            break;
+    if ([self.delegate respondsToSelector:@selector(didTouchEmojiButtonDown)]) {
+        [self.delegate didTouchEmojiButtonDown];
+        return;
     }
-    
     _emojiButton.selected = !_emojiButton.selected;
-    [self setInputViews];
+//    [self setInputViews];
 }
 
 - (void)didTouchOtherButtonDown:(UIButton *)sender {
@@ -297,7 +288,7 @@
                 }
                 break;
             default:
-                [_searchBar becomeFirstResponder];
+            [_searchBar becomeFirstResponder];
                 break;
         }
         
@@ -395,8 +386,8 @@
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
-    //    [_inputTextView setContentOffset:CGPointMake(0.0f, (_inputTextView.contentSize.height - self.inputTextView.frame.size.height) / 2) animated:NO];
-    //    [self performSelector:@selector(layoutTextView:) withObject:textView afterDelay:0.1];
+//    [_inputTextView setContentOffset:CGPointMake(0.0f, (_inputTextView.contentSize.height - self.inputTextView.frame.size.height) / 2) animated:NO];
+//    [self performSelector:@selector(layoutTextView:) withObject:textView afterDelay:0.1];
 }
 
 - (void)relayout{
