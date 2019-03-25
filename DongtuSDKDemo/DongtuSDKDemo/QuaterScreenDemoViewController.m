@@ -62,8 +62,8 @@
     
     messagesArray = [[NSMutableArray alloc] initWithCapacity:0];
     
-    [[DongTu sharedInstance] shouldShowSearchPopupAboveView:_inputToolBar withInput:_inputToolBar.inputTextView];
-    [DongTu sharedInstance].delegate = self;
+    [[Dongtu sharedInstance] shouldShowSearchPopupAboveView:_inputToolBar withInput:_inputToolBar.inputTextView];
+    [Dongtu sharedInstance].delegate = self;
 }
 
 - (void)viewDidLayoutSubviews {
@@ -162,7 +162,7 @@
 }
 
 - (void)didTouchEmojiButtonDown {
-    [[DongTu sharedInstance] triggerSearchGifWindow];
+    [[Dongtu sharedInstance] triggerSearchGifWindow];
 }
 
 - (void)keyboardWillShowWithFrame:(CGRect)keyboardFrame {

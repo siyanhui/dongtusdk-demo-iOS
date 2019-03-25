@@ -23,7 +23,7 @@
 @end
 
 
-@interface DongTu : NSObject
+@interface Dongtu : NSObject
 
 /**
  *  DongTu Singleton

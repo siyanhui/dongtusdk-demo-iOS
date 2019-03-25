@@ -10,7 +10,7 @@
 
 ### 手动导入SDK
 
-下载当前最新版本，解压缩后获得： `DongtuSDK`， 其中包含SDK和库文件`DongtuSDK.framework`及所需的资源文件`DongTuSDK.bundle`
+下载当前最新版本，解压缩后获得： `DongtuSDK`， 其中包含SDK和库文件`DongtuSDK.framework`及所需的资源文件`DongtuSDK.bundle`
 
 
 ### 添加系统库依赖
@@ -37,10 +37,10 @@
 
 ```objectivec
 // 初始化SDK
-[DongTu initWithAppId:@"your app id" secret:@"your secret"];
+[Dongtu initWithAppId:@"your app id" secret:@"your secret"];
 ```
 
-### 1. 通过 `DongTu` 提供的接口查看 SDK 版本、设置用户
+### 1. 通过 `Dongtu` 提供的接口查看 SDK 版本、设置用户
 
 - 查看 SDK 版本
 
@@ -71,7 +71,7 @@
 #### 设置SDK代理 
 使用联想功能和GIF搜索模块前需要设置代理，以接收SDK的事件
 ```objectivec
-[DongTu sharedInstance].delegate = self;
+[Dongtu sharedInstance].delegate = self;
 ```
 
 #### 配置联想功能

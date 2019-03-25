@@ -6,7 +6,7 @@
 //  Copyright © 2018 Isan Hu. All rights reserved.
 //
 
-#import "DongTu.h"
+#import "Dongtu.h"
 //模型
 #import "DTGif.h"
 #import "DTUser.h"
