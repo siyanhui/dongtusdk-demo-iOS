@@ -40,7 +40,7 @@
 [DongTu initWithAppId:@"your app id" secret:@"your secret"];
 ```
 
-### 1. 通过 `DongTu` 提供的接口查看 SDK 版本、设置用户、传输用户的位置信息
+### 1. 通过 `DongTu` 提供的接口查看 SDK 版本、设置用户
 
 - 查看 SDK 版本
 
