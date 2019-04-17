@@ -18,7 +18,7 @@
 /**
  *  the delegate method handles the tap of gif
  */
-- (void)didSelectGif:(DTGif *)gif;
+- (void)didSelectGif:(DTGif *_Nonnull)gif;
 
 @end
 
@@ -42,7 +42,7 @@
  *  @param appid  the unique app id that assigned to your app
  *  @param secret the unique app secret that assigned to your app
  */
-- (void)initWithAppId:(NSString *)appid secret:(NSString *)secret;
+- (void)initWithAppId:(NSString *_Nonnull)appid secret:(NSString *_Nonnull)secret;
 
 /**
  *  get the current version of SDK
@@ -55,7 +55,7 @@
 /**
  set user infomation
  */
-- (void)setUser:(DTUser *)user;
+- (void)setUser:(DTUser *_Nonnull)user;
 
 
 /**

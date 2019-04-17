@@ -14,7 +14,7 @@
 /**
  DTTheme 单例
  */
-+ (instancetype)sharedTheme;
++ (instancetype _Nonnull )sharedTheme;
 
 /**
  图片左下角文字背景色
