@@ -281,32 +281,32 @@
 		CC32401421A817C700897CC0 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
+				CC32402E21A817C700897CC0 /* Info.plist */,
 				CC32401521A817C700897CC0 /* MASCompositeConstraint.h */,
-				CC32401621A817C700897CC0 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				CC32402321A817C700897CC0 /* MASCompositeConstraint.m */,
+				CC32402121A817C700897CC0 /* MASConstraint.h */,
+				CC32402A21A817C700897CC0 /* MASConstraint.m */,
 				CC32401721A817C700897CC0 /* MASConstraint+Private.h */,
-				CC32401821A817C700897CC0 /* MASLayoutConstraint.h */,
-				CC32401921A817C700897CC0 /* NSArray+MASShorthandAdditions.h */,
 				CC32401A21A817C700897CC0 /* MASConstraintMaker.h */,
-				CC32401B21A817C700897CC0 /* View+MASAdditions.h */,
-				CC32401C21A817C700897CC0 /* NSArray+MASAdditions.h */,
+				CC32402421A817C700897CC0 /* MASConstraintMaker.m */,
+				CC32401821A817C700897CC0 /* MASLayoutConstraint.h */,
+				CC32402521A817C700897CC0 /* MASLayoutConstraint.m */,
+				CC32402921A817C700897CC0 /* Masonry.h */,
 				CC32401D21A817C700897CC0 /* MASUtilities.h */,
 				CC32401E21A817C700897CC0 /* MASViewAttribute.h */,
-				CC32401F21A817C700897CC0 /* ViewController+MASAdditions.m */,
+				CC32402D21A817C700897CC0 /* MASViewAttribute.m */,
 				CC32402021A817C700897CC0 /* MASViewConstraint.h */,
-				CC32402121A817C700897CC0 /* MASConstraint.h */,
-				CC32402221A817C700897CC0 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				CC32402321A817C700897CC0 /* MASCompositeConstraint.m */,
-				CC32402421A817C700897CC0 /* MASConstraintMaker.m */,
-				CC32402521A817C700897CC0 /* MASLayoutConstraint.m */,
+				CC32402C21A817C700897CC0 /* MASViewConstraint.m */,
+				CC32401C21A817C700897CC0 /* NSArray+MASAdditions.h */,
 				CC32402621A817C700897CC0 /* NSArray+MASAdditions.m */,
+				CC32401921A817C700897CC0 /* NSArray+MASShorthandAdditions.h */,
+				CC32402221A817C700897CC0 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				CC32401621A817C700897CC0 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				CC32401B21A817C700897CC0 /* View+MASAdditions.h */,
 				CC32402721A817C700897CC0 /* View+MASAdditions.m */,
 				CC32402821A817C700897CC0 /* View+MASShorthandAdditions.h */,
-				CC32402921A817C700897CC0 /* Masonry.h */,
-				CC32402A21A817C700897CC0 /* MASConstraint.m */,
 				CC32402B21A817C700897CC0 /* ViewController+MASAdditions.h */,
-				CC32402C21A817C700897CC0 /* MASViewConstraint.m */,
-				CC32402D21A817C700897CC0 /* MASViewAttribute.m */,
-				CC32402E21A817C700897CC0 /* Info.plist */,
+				CC32401F21A817C700897CC0 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
 			sourceTree = "<group>";
@@ -687,7 +687,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = HY2JF7VN6E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -703,6 +703,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = siyanhui.DongtuSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "XC Wildcard";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -711,7 +712,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = HY2JF7VN6E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -727,6 +728,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = siyanhui.DongtuSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "XC Wildcard";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

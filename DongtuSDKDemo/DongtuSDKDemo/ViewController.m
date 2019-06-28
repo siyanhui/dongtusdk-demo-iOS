@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Masonry.h"
 #import "QuaterScreenDemoViewController.h"
+#import <DongtuSDK/DongtuSDK.h>
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -30,10 +31,10 @@
     _headerContainerView.backgroundColor = [UIColor colorWithWhite:242.0 / 255 alpha:1.0];
     [self.view addSubview:_headerContainerView];
     [_headerContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@195);
         make.top.equalTo(self.view.mas_top);
         make.left.equalTo(self.view.mas_left);
         make.right.equalTo(self.view.mas_right);
-        make.height.equalTo(@195);
     }];
     
     
@@ -75,7 +76,8 @@
     _versionLabel = [UILabel new];
     _versionLabel.backgroundColor = [UIColor clearColor];
     _versionLabel.textColor = [UIColor colorWithWhite:155.0 / 255 alpha:1.0];
-    _versionLabel.text = @"版本 V1.2";
+    _versionLabel.text = [NSString stringWithFormat:@"SDK:%@  Build: %@", [[Dongtu sharedInstance] version],
+                          [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
     _versionLabel.font = [UIFont systemFontOfSize:12];
     _versionLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_versionLabel];
@@ -83,6 +85,8 @@
         make.centerX.equalTo(self.view.mas_centerX);
         make.bottom.equalTo(self.view.mas_bottom).with.offset(-23);
     }];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
