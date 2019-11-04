@@ -67,4 +67,57 @@
  */
 @property (nonatomic, strong, nullable) UIColor  *reloadBtnColor;
 
+
+//关于 gif keyboard
+/**
+ gif keyboard => 热门关键词按钮文字字体
+ */
+@property (nonatomic, strong, nullable) UIFont *gifKeyboardHotWordButtonTitleFont;
+/**
+ gif keyboard => 热门关键词按钮文字颜色
+ */
+@property (nonatomic, strong, nullable) UIColor *gifKeyboardHotWordButtonTitleColor;
+/**
+ gif keyboard => 热门关键词按钮背景颜色
+ */
+@property (nonatomic, strong, nullable) UIColor *gifKeyboardHotWordButtonBgColor;
+/**
+ gif keyboard => 热门关键词按钮边框颜色
+ */
+@property (nonatomic, strong, nullable) UIColor *gifKeyboardHotWordButtonBorderColor;
+/**
+ gif keyboard => 热门关键词按钮边框宽度
+ */
+@property (nonatomic, assign) CGFloat gifKeyboardHotWordButtonBorderWidth;
+/**
+ gif keyboard => 热门关键词按钮圆角半径
+ */
+@property (nonatomic, assign) CGFloat gifKeyboardHotWordButtonCornerRadius;
+
+/**
+ gif keyboard => search bar text font
+ */
+@property (nonatomic, strong, nullable) UIFont *gifKeyboardSearchBarTextFont;
+/**
+ gif keyboard => 搜索框文字颜色
+ */
+@property (nonatomic, strong, nullable) UIColor *gifKeyboardSearchBarTextColor;
+/**
+ gif keyboard => 搜索框背景颜色
+ */
+@property (nonatomic, strong, nullable) UIColor *gifKeyboardSearchBarBgColor;
+/**
+ gif keyboard => 搜索框边框颜色
+ */
+@property (nonatomic, strong, nullable) UIColor *gifKeyboardSearchBarBorderColor;
+/**
+ gif keyboard => 搜索框边框宽度
+ */
+@property (nonatomic, assign) CGFloat gifKeyboardSearchBarBorderWidth;
+/**
+ gif keyboard => 搜索框圆角半径
+ */
+@property (nonatomic, assign) CGFloat gifKeyboardSearchBarCornerRadius;
+
+
 @end

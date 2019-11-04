@@ -8,7 +8,6 @@
 #import <Foundation/Foundation.h>
 #import "DTUser.h"
 #import "DTGif.h"
-
 /**
  Dongtu Delegate
  */
