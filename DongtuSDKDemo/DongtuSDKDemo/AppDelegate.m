@@ -17,13 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[Dongtu sharedInstance] initWithAppId:@"" secret:@""];
+
+    NSString *appId = @"5ca51cf0caa945e095155c21d6a79430";
+    NSString *secret = @"e11670a6d06f4ce186944b84bc23fbc9";
+    [[Dongtu sharedInstance] initWithAppId:appId secret:secret];
     DTUser *user = [[DTUser alloc] init];
     user.name = @"username";
     user.userId = @"33333333";
     user.email = @"user@gmail.com";
     user.otherInfo = @{@"region":@"China"};
-    [[Dongtu sharedInstance] setUser:user];
+//    [[Dongtu sharedInstance] setUser:user];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     
     _window.rootViewController = nav;

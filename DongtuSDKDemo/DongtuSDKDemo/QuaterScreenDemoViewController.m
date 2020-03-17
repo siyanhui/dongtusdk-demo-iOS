@@ -64,6 +64,20 @@
     
     [[Dongtu sharedInstance] shouldShowSearchPopupAboveView:_inputToolBar withInput:_inputToolBar.inputTextView];
     [Dongtu sharedInstance].delegate = self;
+    
+    
+    UIView *testView = [UIView new];
+    testView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:testView];
+    [testView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.view);
+        make.centerX.equalTo(self.view);
+        
+        make.width.mas_greaterThanOrEqualTo(55);
+        make.height.mas_lessThanOrEqualTo(55);
+        //        make.left.equalTo(self.view.mas_left).mas_greaterThanOrEqualTo(55);
+        //        make.right.equalTo(self.view.mas_right).mas_lessThanOrEqualTo(-55);
+    }];
 }
 
 - (void)viewDidLayoutSubviews {
