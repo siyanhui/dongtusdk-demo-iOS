@@ -18,8 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    NSString *appId = @"5ca51cf0caa945e095155c21d6a79430";
-    NSString *secret = @"e11670a6d06f4ce186944b84bc23fbc9";
+    NSString *appId = @"";
+    NSString *secret = @"";
     [[Dongtu sharedInstance] initWithAppId:appId secret:secret];
     DTUser *user = [[DTUser alloc] init];
     user.name = @"username";
